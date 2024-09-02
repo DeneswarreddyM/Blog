@@ -1,0 +1,28 @@
+<div class="author">
+  <div class="author-heading">Hi,I am tempo.</div>
+  <div class="author-body">web Developer and content creator.</div>
+</div>
+
+<img src="/img/Moon.jpeg" alt="" class="heroimage" width="981" height="528">
+
+<section class="articles">
+  <h2 class="articles-heading">Latest Posts</h2>
+  <ul class="article-ul">
+    <% data.forEach(post=> { %>
+      <li>
+        <a href="/post/<%=post._id%>">
+          <span><%= post._id %></span>
+          <span><%=post.title%> </span>
+          <span class="article-list_date"><%= post.createdAt.toDateString() %></span> 
+        </a>
+      </li>
+      <% }) %>
+  </ul>
+
+  <% if (nextPage!==null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+   <% } %>
+
+
+
+</section>

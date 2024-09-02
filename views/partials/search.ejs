@@ -1,0 +1,21 @@
+<div class="searchBar">
+    <div class="search-title">Search Our Site</div>
+    <div class="container">
+        <form action="/search" class="search-form" role="search" method="POST">
+            <input
+                type="search"
+                aria-label="Search"
+                id="searchInput"
+                name="searchTerm"
+                placeholder="Search the site.."
+                required
+                value="<%= typeof searchTerm !== 'undefined' ? searchTerm : '' %>"
+            >
+            <button type="submit" class="searchButton">Search</button>
+        </form>
+        <button id="searchClose" aria-label="Close Search Bar">Close</button>
+    </div>
+</div>
+
+
+
